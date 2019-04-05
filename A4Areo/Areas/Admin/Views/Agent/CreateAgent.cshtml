@@ -1,0 +1,459 @@
+﻿
+@{
+    ViewData["Title"] = "CreateAgent";
+}
+
+<h4>Create  Agent</h4>
+<small>Agents > Create  Agent</small>
+
+
+<script src="~/js/jquery.min.js"></script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-white" id="panel5">
+            <div class="panel-heading">
+                <div>
+                    <a class="btn btn-primary pull-right" href="/Admin/Agent/AgentList"><i class="fa fa-list-ul"></i> View List</a>
+                </div>
+                <div class="panel-tools">
+                    <a data-original-title="Collapse" data-toggle="tooltip" data-placement="top" class="btn btn-transparent btn-sm panel-collapse" href="#"><i class="ti-minus collapse-off"></i><i class="ti-plus collapse-on"></i></a>
+                </div>
+            </div>
+            <div class="panel-body" style="display: block;">
+                <form class="form-horizontal" id="formPost">
+
+                    <input type="hidden" id="businessId" />
+
+                    <div class="col-md-5">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Code <span class="symbol required" aria-required="true"></span></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="code" required />
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Email <span class="symbol required" aria-required="true"></span></label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="email" required />
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Name <span class="symbol required" aria-required="true"></span></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="name" required />
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Street <span class="symbol required" aria-required="true"></span></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="street" required />
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">City <span class="symbol required" aria-required="true"></span></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="city" required />
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">State <span class="symbol required" aria-required="true"></span></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="state" required />
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Zip <span class="symbol required" aria-required="true"></span></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="zip" required />
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Country <span class="symbol required" aria-required="true"></span></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="country" required />
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Mobile <span class="symbol required" aria-required="true"></span></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="mobile" required />
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Phone <span class="symbol required" aria-required="true"></span></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="phone" required />
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">ContactPerson <span class="symbol required" aria-required="true"></span></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="contactPerson" required />
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">ReferredBy <span class="symbol required" aria-required="true"></span></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="referredBy" required />
+
+                                </div>
+                            </div>
+                        </div>
+
+                        @*<div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Status <span class="symbol required" aria-required="true"></span></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="status" required />
+
+                                </div>
+                            </div>
+                        </div>*@
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Balance <span class="symbol required" aria-required="true"></span></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="balance" required />
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">CurrentBalance <span class="symbol required" aria-required="true"></span></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="currentBalance" required />
+
+                                </div>
+                            </div>
+                        </div>
+
+                    
+                    </div>
+                    <div class="col-md-6">
+                        @*<div class="col-sm-12">
+            <div class="form-group">
+                <label class="control-label col-sm-2">Status <span class="symbol required" aria-required="true"></span></label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="status" required />
+
+                </div>
+            </div>
+        </div>*@
+
+
+                        <div class="col-sm-12">
+                            <div> <label class="control-label">Status <span class="symbol required" aria-required="true"></span></label></div>
+                            <label class="radio-inline"><input type="radio" value="2" name="statusRadio" checked>NEW</label>
+                            <label class="radio-inline"><input type="radio" value="1" name="statusRadio">ACTIVE</label>
+                            <label class="radio-inline"><input type="radio" value="0" name="statusRadio">INACTIVE </label>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div> <label class="control-label">Logo <span class="symbol required" aria-required="true"></span></label></div>
+                            <input id="logo" type='file'>
+                            <input type="hidden" id="hdnLogo" />
+                            <img id="img" height="150">
+                        </div>
+
+                    </div>
+                  
+
+
+
+
+
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <input type="submit" value="Save" id="btnSaveAgent" class="btn btn-primary" />
+                            <button type="submit" id="btnUpdateAgent" class="btn btn-primary">Update</button>
+                        </div>
+                    </div>
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+
+    $(function () {
+        var businessId = getUrlVars()["businessId"];
+        if (businessId != null) {
+            //alert(businessId);
+            editProduct(businessId);
+            $("#businessId").val(businessId);
+            $("#btnSaveAgent").hide();
+        }
+        else {
+            $("#btnUpdateAgent").hide();
+        }
+
+
+    });
+
+
+    function getUrlVars() {
+        var vars = [], hash;
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for (var i = 0; i < hashes.length; i++) {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+        }
+        return vars;
+    }
+
+    function editProduct(id) {
+
+
+        var model = {
+            BusinessId: id
+        }
+
+
+        $.ajax({
+            type: "POST",
+            url: "/Admin/Agent/GetAgent",
+            data: JSON.stringify(model),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+
+
+                $("#code").val(data.Code),
+                    $("#email").val(data.Email),
+                    $("#name").val(data.Name),
+                    $("#street").val(data.Street),
+                    $("#city").val(data.City),
+                    $("#state").val(data.State),
+                    $("#zip").val(data.Zip),
+                    $("#country").val(data.Country),
+                    $("#mobile").val(data.Mobile),
+                    $("#phone").val(data.Phone),
+                    $("#contactPerson").val(data.ContactPerson),
+                    $("#referredBy").val(data.ReferredBy),
+                    $("input[name=statusRadio][value=" + data.Status + "]").attr('checked', 'checked'),
+
+                    $("#balance").val(data.Balance),
+                    $("#currentBalance").val(data.CurrentBalance)
+            }
+        });
+
+    };
+
+
+
+
+    $("#btnUpdateAgent").click(function () {
+
+        //var files = $("#fileInput").get(0).files;
+
+        var data =
+        {
+            "BusinessId": $("#businessId").val(),
+            "Code": $("#code").val(),
+            "Email": $("#email").val(),
+            "Name": $("#name").val(),
+            "Street": $("#street").val(),
+            "City": $("#city").val(),
+            "State": $("#state").val(),
+            "Zip": $("#zip").val(),
+            "Country": $("#country").val(),
+            "Mobile": $("#mobile").val(),
+            "Phone": $("#phone").val(),
+            "ContactPerson": $("#contactPerson").val(),
+            "ReferredBy": $("#referredBy").val(),
+            "Status": $("input[name='statusRadio']:checked").val(),
+            "Balance": $("#balance").val(),
+            "CurrentBalance": $("#currentBalance").val(),
+             "Logo": $("#hdnLogo").val(),
+        }
+        //if (files.length > 0) {
+        //    data.Logo = files[0];
+        //}
+        console.log(data);
+
+        $.ajax({
+            type: "POST",
+            url: "/Admin/Agent/CreateAgent",
+            data: JSON.stringify(data),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                //console.log(data);
+
+                if (data.Success === "success") {
+                    swal("Agent Updated!", "Agent Info updated Successfully!!!", "success");
+                    clear();
+                }
+            }
+        });
+
+
+
+    });
+
+
+
+    $("#btnSaveAgent").click(function (e) {
+
+       
+        if ($("#formPost")[0].checkValidity()) {
+            var data =
+            {
+                "Code": $("#code").val(),
+                "Email": $("#email").val(),
+                "Name": $("#name").val(),
+                "Street": $("#street").val(),
+                "City": $("#city").val(),
+                "State": $("#state").val(),
+                "Zip": $("#zip").val(),
+                "Country": $("#country").val(),
+                "Mobile": $("#mobile").val(),
+                "Phone": $("#phone").val(),
+                "ContactPerson": $("#contactPerson").val(),
+                "ReferredBy": $("#referredBy").val(),
+                "Balance": parseFloat($("#balance").val()),
+                "CurrentBalance": parseFloat($("#currentBalance").val()),
+                "Status": $("input[name='statusRadio']:checked").val(),
+                "Logo": $("#hdnLogo").val(),
+            }
+
+            console.log(data);
+
+            $.ajax({
+                type: "POST",
+                url: "/Admin/Agent/CreateAgent",
+                data: JSON.stringify(data),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    //console.log(data);
+
+                    if (data.Success === "success") {
+                        swal("Agent Added!", "Agent Added Successfully!!!", "success");
+                        clear();
+                    }
+                }
+            });
+            e.preventDefault(e);
+            return false;
+        }
+        
+
+
+
+    });
+
+
+
+
+
+
+
+
+    function readFile() {
+
+        if (this.files && this.files[0]) {
+
+            var FR = new FileReader();
+
+            FR.addEventListener("load", function (e) {
+                document.getElementById("img").src = e.target.result;
+                document.getElementById("hdnLogo").value = e.target.result;
+            });
+
+            FR.readAsDataURL(this.files[0]);
+        }
+
+    }
+
+
+    document.getElementById("logo").addEventListener("change", readFile);
+
+
+
+    function clear() {
+
+        $("#code").val(""),
+            $("#email").val(""),
+            $("#name").val(""),
+            $("#street").val(""),
+            $("#city").val(""),
+            $("#state").val(""),
+            $("#zip").val(""),
+            $("#country").val(""),
+            $("#mobile").val(""),
+            $("#phone").val(""),
+            $("#contactPerson").val(""),
+            $("#referredBy").val(""),
+            $("#status").val(""),
+            $("#balance").val(""),
+            $("#currentBalance").val(""),
+            $("#logo").val(""),
+            $("#img").removeAttr("src"),
+            
+            $("input[name=statusRadio][value=2]").attr('checked', 'checked');
+            document.getElementById("imgSrc").src = "";
+
+    }
+
+
+</script>
